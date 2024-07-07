@@ -1,0 +1,151 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../images/etc/Terra-Background.png');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Rubik', sans-serif;
+}
+
+.page {
+    display: flex;
+    justify-content: left;
+}
+
+.main {
+    width: 100%;
+    margin: 0 auto;
+    margin-left: 15%;
+    padding: 20px;
+}
+
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    background: white;
+    text-align: left;
+    width: 80%;
+}
+
+.header h1 {
+    font-size: 6em;
+    margin: 0 0 -20px 0;
+}
+
+.header h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    position: relative;
+}
+
+.header h2:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    margin: 10px auto;
+
+    top: 50%;
+}
+
+.header h2 a {
+    color: #5c6bc0;
+    text-decoration: none;
+}
+
+.games {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+}
+
+.game {
+    background-color: #222;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.bbs::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #7694fd;
+    border-radius: 50%;
+}
+
+.kh3::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #fda654;
+    border-radius: 50%;
+}
+
+.ddd::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #cd03c5;
+    border-radius: 50%;
+}
+
+.dr::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #808080;
+    border-radius: 50%;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 80%;
+}
+
+.box {
+    background-color: #ccc;
+    width: calc(50% - 10px);
+    height: 200px;
+}
+
+.box.large {
+    width: 100%;
+}
+
+.passport {
+    width: 30%;
+    text-align: center;
+    
+    margin-right: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.passport img {
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+.profile-info {
+    text-align: left;
+    font-size: 1em;
+    line-height: 1.6em;
+}
