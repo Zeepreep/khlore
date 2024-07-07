@@ -6,13 +6,13 @@ body {
     background-size: cover;
     margin: 0;
     padding: 0;
-    
+
     font-family: 'Rubik', sans-serif;
 }
 
 .page {
     display: flex;
-    justify-content: left;
+    justify-content: center;
 }
 
 .main {
@@ -33,7 +33,7 @@ body {
 
 .header h1 {
     font-size: 6em;
-    margin: 0 0 -20px 0;
+    margin: 0 0 -5px 0;
 }
 
 .header h2 {
@@ -130,22 +130,52 @@ body {
 }
 
 .passport {
+    position: relative;
+    right: 0;
+    top: 0;
     width: 30%;
-    text-align: center;
-    
-    margin-right: 20px;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    margin: 1%;
 }
 
-.passport img {
-    width: 70%;
-    margin-bottom: 20px;
+.passport-background,
+.passport-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.passport-background img {
+    width: 100%;
+}
+
+.passport-content .passport-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.passport-content img {
+    width: 80%;
+    margin-top: 15%;
 }
 
 .profile-info {
-    text-align: left;
-    font-size: 1em;
-    line-height: 1.6em;
+    justify-content: left;
+    margin-left: 7%;
 }
+
+.profile-info:before {
+    justify-content: center;
+
+    content: '';
+    display: flex;
+    width: 90%;
+    height: 1px;
+    background-color: #000;
+    top: 50%;
+}
+
