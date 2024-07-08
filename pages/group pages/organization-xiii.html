@@ -15,27 +15,34 @@
         <input type="checkbox" id="toggle-top" style="display:none;">
         <div class="content-top-bar">
             <img src="../../images/etc/Terra-Background-Inverse.png" alt="Top background image.">
+            <div class="search-bar">
+                <form id="search-form">
+                    <input type="text" id="search-query" name="query" placeholder="Search the wiki...">
+                    <button type="submit">Search</button>
+                </form>
+            </div>
         </div>
     </div>
     <div class="toggle-container-top">
         <label for="toggle-top" class="top-bar"> Click here to toggle</label>
     </div>
-    
+
+
     <div class="content">
-        
+
         <div class="side-bar">
             <input type="checkbox" id="toggle-side" style="display:none;">
             <div class="content-side-bar">
                 <img src="../../images/etc/Terra-Background-Inverse.png" alt="Side background image.">
             </div>
         </div>
-        
+
         <div class="toggle-container-side">
             <label for="toggle-side" class="side-bar"> > </label>
         </div>
 
 
-        <div class="main">            
+        <div class="main">
             <div class="header">
                 <h1>Organization XIII</h1>
                 <h2>Run by <a href="../character%20pages/xehanort.html">Xehanort</a></h2>
@@ -117,6 +124,16 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.getElementById('search-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const query = document.getElementById('search-query').value;
+            if (query) {
+                window.location.href = `../search.html?q=${encodeURIComponent(query)}`;
+            }
+        });
+    </script>
 
 </body>
 </html>

@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Search Results</title>
+  <link rel="stylesheet" href="../character_styles/regular_page_style.css">
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <h1>Search Results</h1>
+    <p id="search-summary"></p>
+  </div>
+  <div class="content" id="results-container">
+    <!-- Search results will be displayed here -->
+  </div>
+</div>
+
+<script>
+  // Function to get query parameter value by name
+  function getQueryParameter(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+  }
+
+  // Function to fetch search index
+  async function fetchSearchIndex() {
+    try {
+      const response = await fetch('../json/search-index.json');  // Adjust path if necessary
+      if (!response.ok) {
+        throw new Error('Network response was not ok ' + response.statusText);
+      }
+      const data = await response.json();
+      console.log('Fetched search index:', data);  // Debugging
+      return data;
+    } catch (error) {
+      console.error('Failed to fetch search index:', error);
+      return [];
+    }
+  }
+
+  // Function to render search results
+  function renderSearchResults(query, searchIndex) {
+    const resultsContainer = document.getElementById('results-container');
+    resultsContainer.innerHTML = '';
+
+    const filteredResults = searchIndex.filter(item =>
+            item.title.toLowerCase().includes(query.toLowerCase()) ||
+            item.description.toLowerCase().includes(query.toLowerCase()) ||
+            item.keywords.some(keyword => keyword.toLowerCase().includes(query.toLowerCase()))
+    );
+
+    console.log('Filtered results:', filteredResults);  // Debugging
+
+    if (filteredResults.length === 0) {
+      resultsContainer.innerHTML = '<p>No results found.</p>';
+    } else {
+      filteredResults.forEach(result => {
+        const resultItem = document.createElement('div');
+        resultItem.classList.add('search-result');
+
+        const title = document.createElement('h2');
+        const link = document.createElement('a');
+        link.href = result.link;
+        link.textContent = result.title;
+        title.appendChild(link);
+
+        const description = document.createElement('p');
+        description.textContent = result.description;
+
+        resultItem.appendChild(title);
+        resultItem.appendChild(description);
+
+        resultsContainer.appendChild(resultItem);
+      });
+    }
+  }
+
+  // Main function to handle the search
+  async function main() {
+    const query = getQueryParameter('q');
+    console.log('Search query:', query);  // Debugging
+    const searchSummary = document.getElementById('search-summary');
+
+    if (query) {
+      searchSummary.textContent = `Showing results for "${query}"`;
+
+      const searchIndex = await fetchSearchIndex();
+      renderSearchResults(query, searchIndex);
+    } else {
+      searchSummary.textContent = 'No search query provided.';
+    }
+  }
+
+  // Run the main function
+  main();
+</script>
+</body>
+</html>

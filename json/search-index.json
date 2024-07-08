@@ -1,0 +1,20 @@
+﻿[
+  {
+    "title": "Xehanort",
+    "description": "Seeker of Darkness, Leader of Organization XIII",
+    "link": "../pages/character pages/xehanort.html",
+    "keywords": ["xehanort", "organization xiii", "seeker of darkness"]
+  },
+  {
+    "title": "Organization XIII",
+    "description": "The group of Nobodies that Xehanort leads",
+    "link": "../pages/group pages/organization-xiii.html",
+    "keywords": ["organization xiii", "organization", "nobodies", "xehanort"]
+  },
+  {
+    "title": "Page 3",
+    "description": "Description of page 3",
+    "link": "../page3.html",
+    "keywords": ["keyword5", "keyword6"]
+  }
+]
