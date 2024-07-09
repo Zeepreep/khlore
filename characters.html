@@ -1,66 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kingdom Hearts Lore Guide</title>
-    <link rel="stylesheet" href="styles.css">
-    <title>MAIN PAGE</title>
-
-    <style>
-        img {
-            width: 5%;
-            align-content: center;
-        }
-
-        div {
-            text-align: center
-        }
-
-        .ventusConatainer {
-            wrap-option: hard;
-        }
-
-        body {
-            background-image: url('images/etc/background.png');
-        }
-
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Characters Page</title>
+    <link rel="stylesheet" href="styles/page_styles/characters_page_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="main">
-    <h1>Kingdom Hearts Lore Guide</h1>
 
-    <a href="./index.html"><h2>Back!</h2></a>
-</div>
+<header class="header">
+    <div class="container">
+        <h1>Characters</h1>
+        <p>Explore the characters of Kingdom Hearts</p>
+    </div>
+</header>
 
-<div class="ventusContainer">
+<main class="container">
+    <div class="characters-grid">
+        <div class="character">
+            <div class="image-container">
+                <img src="images/character_renders/sora.webp" alt="Sora">
+            </div>
+            <div class="character-name">Sora</div>
+        </div>
 
-    <a href="pages/character pages/ventus.html"><img src="images/character_full/Ventus_full.png" alt="Ventus"></a>
+        <div class="character">
+            <div class="image-container">
+                <img src="images/character_renders/roxas.webp" alt="Roxas">
+            </div>
+            <div class="character-name">Roxas</div>
+        </div>
 
-</div>
+        <div class="character">
+            <div class="image-container">
+                <img src="images/character_renders/riku.webp" alt="Riku">
+            </div>
+            <div class="character-name">Riku</div>
+        </div>
 
-<div class="momContainer">
+        <div class="character">
+            <div class="image-container">
+                <img src="images/character_renders/kairi.webp" alt="Kairi">
+            </div>
+            <div class="character-name">Kairi</div>
+        </div>
 
-    <a href="pages/character pages/master_of_masters.html"><img src="images/character_full/Master_of_Masters_full.webp"
-                                                          alt="The Master of Masters"></a>
+        <div class="character">
+            <div class="image-container">
+                <img src="images/character_renders/donald.webp" alt="Donald Duck">
+            </div>
+            <div class="character-name">Donald Duck</div>
+        </div>
 
-</div>
+        <div class="character">
+            <div class="image-container">
+                <img src="images/character_renders/goofy.webp" alt="Goofy">
+            </div>
+            <div class="character-name">Goofy</div>
+        </div>
 
-<div class="xehanortContainer">
+        <div class="character">
+            <a href="pages/character%20pages/xehanort.html">
+                <div class="image-container">
+                    <img src="images/character_full/Xehanort_Old.png" alt="Xehanort">
+                </div>
+                <div class="character-name">Xehanort</div>
+            </a>
+        </div>
 
-    <a href="pages/character pages/xehanort.html"><img src="images/character_full/Xehanort_Old.png" alt="Xehanort"></a>
+        <div class="character">
+            <a href="pages/group%20pages/organization-xiii.html">
+                <div class="image-container">
+                    <img src="images/groups/organization_xiii_group.jpg" alt="Organization 13">
+                </div>
+                <div class="character-name">Organization XIII</div>
+            </a>
+        </div>
 
-</div>
+    </div>
+</main>
 
-<div class="orgContainer">
-
-    <a href="pages/group%20pages/organization-xiii.html"><img src="images/groups/organization_xiii_group.jpg" alt="Organization XIII"></a>
-    
-</div>
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2024 Kingdom Hearts Wiki. All rights reserved.</p>
+    </div>
+</footer>
 
 </body>
-
-
 </html>
