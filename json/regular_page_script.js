@@ -24,12 +24,13 @@ function createFilterTags() {
         character: new Set(),
         world: new Set()
     };
+
     document.querySelectorAll('.image-container').forEach(container => {
         const containerTags = container.getAttribute('data-tags').split(' ');
         containerTags.forEach(tag => {
             if (tag.match(/^(kh1|recom|kh2|358|bbs|ddd|kh3|dr)$/)) {
                 tags.game.add(tag);
-            } else if (tag.match(/^(sora|roxas|organization-xiii)$/)) {
+            } else if (tag.match(/^(sora|roxas|organization-xiii|marluxia|vexen|axel)$/)) {
                 tags.character.add(tag);
             } else {
                 tags.world.add(tag);
@@ -39,17 +40,19 @@ function createFilterTags() {
 
     Object.keys(tags).forEach(type => {
         const filterTagsContainer = document.querySelector(`.${type}-tags`);
-        filterTagsContainer.innerHTML = ''; // Clear existing tags
+        filterTagsContainer.innerHTML = '';
         tags[type].forEach(tag => {
             const tagElement = document.createElement('label');
             tagElement.classList.add('game-tag');
             tagElement.style.setProperty('--color', getTagColor(tag));
-            tagElement.innerHTML = `<input type="checkbox" class="tag-filter" value="${tag}"> ${tag.toUpperCase()}`;
+
+            const displayName = getTagName(tag, false);
+
+            tagElement.innerHTML = `<input type="checkbox" class="tag-filter" value="${tag}"> ${displayName}`;
             filterTagsContainer.appendChild(tagElement);
         });
     });
 
-    // Add event listeners to the newly created checkboxes
     document.querySelectorAll('.tag-filter').forEach(filter => {
         filter.addEventListener('change', function () {
             const selectedTags = Array.from(document.querySelectorAll('.tag-filter:checked')).map(checkbox => checkbox.value);
@@ -74,11 +77,38 @@ function getTagColor(tag) {
         dr: '#808080',
         sora: '#ffd700',
         roxas: '#ffa500',
-        'organization-xiii': '#000000',
+        marluxia: '#f19bf1',
+        vexen: '#5b9191',
+        axel: '#ff0c0c',
+        'organization-xiii': '#484848',
         'twilight-town': '#00ff00',
-        'the-world-that-never-was': '#0000ff'
+        'the-world-that-never-was': '#0000ff',
+        'castle-oblivion': '#bbbbbb',
     };
     return colors[tag] || '#000000';
+}
+
+function getTagName(tag, isShort) {
+    const tagNames = {
+        kh1: ['KH1', 'Kingdom Hearts'],
+        recom: ['RE:COM', 'Re:Chain of Memories'],
+        kh2: ['KH2', 'Kingdom Hearts II'],
+        358: ['358/2', '358/2 Days'],
+        bbs: ['BBS', 'Birth by Sleep'],
+        ddd: ['DDD', 'Dream Drop Distance'],
+        kh3: ['KH3', 'Kingdom Hearts III'],
+        dr: ['DR', 'Dark Road'],
+        sora: ['Sora', 'Sora'],
+        roxas: ['Roxas', 'Roxas'],
+        marluxia: ['Marluxia', 'Marluxia'],
+        vexen: ['Vexen', 'Vexen'],
+        axel: ['Axel', 'Axel'],
+        'organization-xiii': ['Org XIII', 'Organization XIII'],
+        'twilight-town': ['Twilight Town', 'Twilight Town'],
+        'the-world-that-never-was': ['TWTNW', 'The World That Never Was'],
+        'castle-oblivion': ['Castle Oblivion', 'Castle Oblivion'],
+    };
+    return tagNames[tag] ? tagNames[tag][isShort ? 0 : 1] : tag;
 }
 
 function showFilter(type) {
@@ -88,7 +118,35 @@ function showFilter(type) {
     document.getElementById(`${type}-tab`).classList.add('active');
 }
 
-// Initialize filters on page load
 window.onload = function () {
     createFilterTags();
-};
+}
+
+function attachTagsToBoxes() {
+    document.querySelectorAll('.image-container').forEach(container => {
+        const containerTags = container.getAttribute('data-tags').split(' ');
+
+        const tagsGroup = document.createElement('div');
+        tagsGroup.classList.add('tags-container');
+
+        containerTags.forEach(tag => {
+            const tagElement = document.createElement('div');
+            tagElement.classList.add('block-tag');
+            tagElement.style.setProperty('--color', getTagColor(tag));
+
+            const displayName = getTagName(tag, true);
+            tagElement.textContent = displayName;
+
+            tagsGroup.appendChild(tagElement);
+        });
+
+        container.prepend(tagsGroup);
+    });
+}
+
+window.onload = function () {
+    createFilterTags();
+    attachTagsToBoxes();
+}
+
+;
