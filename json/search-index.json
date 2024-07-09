@@ -2,19 +2,189 @@
   {
     "title": "Xehanort",
     "description": "Seeker of Darkness, Leader of Organization XIII",
+    "category": "character",
     "link": "../pages/character pages/xehanort.html",
-    "keywords": ["xehanort", "organization xiii", "seeker of darkness"]
+    "keywords": [
+      "xehanort",
+      "organization xiii",
+      "seeker of darkness"
+    ],
+    "tag": "xehanort",
+    "color": "#B9892F",
+    "name": [
+      "Xehanort",
+      "Xehanort"
+    ]
   },
   {
     "title": "Organization XIII",
     "description": "The group of Nobodies that Xehanort leads",
+    "category": "group",
     "link": "../pages/group pages/organization-xiii.html",
-    "keywords": ["organization xiii", "organization", "nobodies", "xehanort"]
+    "keywords": [
+      "organization xiii",
+      "organization",
+      "nobodies",
+      "xehanort"
+    ],
+    "tag": "organization-xiii",
+    "color": "#484848",
+    "name": [
+      "Org XIII",
+      "Organization XIII"
+    ]
   },
   {
-    "title": "Page 3",
-    "description": "Description of page 3",
-    "link": "../page3.html",
-    "keywords": ["keyword5", "keyword6"]
+    "tag": "kh1",
+    "color": "#58ab58",
+    "name": [
+      "KH1",
+      "Kingdom Hearts"
+    ],
+    "category": "game"
+  },
+  {
+    "tag": "recom",
+    "color": "#ffffff",
+    "name": [
+      "RE:COM",
+      "Re:Chain of Memories"
+    ],
+    "category": "game"
+  },
+  {
+    "tag": "kh2",
+    "color": "#5fc0e0",
+    "name": [
+      "KH2",
+      "Kingdom Hearts II"
+    ],
+    "category": "game"
+  },
+  {
+    "tag": "358",
+    "color": "#a80000",
+    "name": [
+      "358/2",
+      "358/2 Days"
+    ],
+    "category": "game"
+  },
+  {
+    "tag": "bbs",
+    "color": "#7694fd",
+    "name": [
+      "BBS",
+      "Birth by Sleep"
+    ],
+    "category": "game"
+  },
+  {
+    "tag": "ddd",
+    "color": "#cd03c5",
+    "name": [
+      "DDD",
+      "Dream Drop Distance"
+    ],
+    "category": "game"
+  },
+  {
+    "tag": "kh3",
+    "color": "#fda654",
+    "name": [
+      "KH3",
+      "Kingdom Hearts III"
+    ],
+    "category": "game"
+  },
+  {
+    "tag": "dr",
+    "color": "#808080",
+    "name": [
+      "DR",
+      "Dark Road"
+    ],
+    "category": "game"
+  },
+  {
+    "tag": "sora",
+    "color": "#ffd700",
+    "name": [
+      "Sora",
+      "Sora"
+    ],
+    "category": "character"
+  },
+  {
+    "tag": "roxas",
+    "color": "#ffa500",
+    "name": [
+      "Roxas",
+      "Roxas"
+    ],
+    "category": "character"
+  },
+  {
+    "tag": "marluxia",
+    "color": "#f19bf1",
+    "name": [
+      "Marluxia",
+      "Marluxia"
+    ],
+    "category": "character"
+  },
+  {
+    "tag": "vexen",
+    "color": "#5b9191",
+    "name": [
+      "Vexen",
+      "Vexen"
+    ],
+    "category": "character"
+  },
+  {
+    "tag": "axel",
+    "color": "#ff0c0c",
+    "name": [
+      "Axel",
+      "Axel"
+    ],
+    "category": "character"
+  },
+  {
+    "tag": "xemnas",
+    "color": "#b7b7b7",
+    "name": [
+      "Xemnas",
+      "Xemnas"
+    ],
+    "category": "character"
+  },
+  {
+    "tag": "twilight-town",
+    "color": "#00ff00",
+    "name": [
+      "Twilight Town",
+      "Twilight Town"
+    ],
+    "category": "world"
+  },
+  {
+    "tag": "the-world-that-never-was",
+    "color": "#0000ff",
+    "name": [
+      "TWTNW",
+      "The World That Never Was"
+    ],
+    "category": "world"
+  },
+  {
+    "tag": "castle-oblivion",
+    "color": "#bbbbbb",
+    "name": [
+      "Castle Oblivion",
+      "Castle Oblivion"
+    ],
+    "category": "world"
   }
 ]

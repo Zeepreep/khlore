@@ -215,6 +215,15 @@ body {
 
 
 /* Main Content Styles */
+
+.page-elements {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 10px;
+}
+
 .content {
     display: flex;
     flex-direction: row;
@@ -225,15 +234,22 @@ body {
 .main {
     width: 100%;
     padding: 20px;
-    margin: 1% 8% auto 8%;
+    margin: 0.5% 4% auto 8%;
+    background-color: rgba(239, 239, 239, 0.51);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
 }
 
 /* Header Styles */
 .header {
-    margin-bottom: 20px;
-    background: white;
+    margin-bottom: 30px;
+    background: #dadada;
+    padding: 10px 25px 25px 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
     text-align: left;
-    width: 100%;
+    width: 96.5%;
 }
 
 .header h1 {
@@ -331,23 +347,15 @@ body {
 }
 
 .tags-container {
-    display: none;
-    animation: slide-down 0.5s forwards;
+    grid-area: tags;
+    display: flex;
+    gap: 4px;
+    transform: translateY(-150%);
+    transition: transform 0.5s;
 }
-
-@keyframes slide-down {
-    0% {
-        transform: translateY(-100%);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-
 
 .image-container:hover .tags-container {
-    display: flex;
+    transform: translateY(0);
 }
 
 .image-container .text-container {
@@ -404,7 +412,7 @@ body {
 .hover-text:after {
     content: '';
     display: flex;
-    width: 0;
+    width: 0%;
     height: 4px;
     margin-top: 10px;
     margin-left: -5px;
@@ -414,17 +422,15 @@ body {
 }
 
 .image-container:hover .hover-text:after {
-    width: 100%;
+    width: 95%;
 }
 
 /* Passport Styles */
 .passport {
     position: relative;
     right: 0;
-    top: 0;
-    width: 30%;
-    margin: 20px;
-    margin-left: -5px;
+    width: 40%;
+    margin: 1% 1% auto 1%;
 }
 
 .passport-background,
@@ -448,8 +454,17 @@ body {
 }
 
 .passport-content img {
-    width: 80%;
-    margin-top: 15%;
+    width: 70%;
+    margin-top: 30%;
+}
+
+.header-text {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 12%;
+    margin-left: 4.9%;
+    width: 91%;
+    color: white;
 }
 
 .profile-info {
@@ -457,12 +472,3 @@ body {
     margin-left: 7%;
 }
 
-.profile-info:before {
-    justify-content: center;
-    content: '';
-    display: flex;
-    width: 90%;
-    height: 1px;
-    background-color: #000;
-    top: 50%;
-}
