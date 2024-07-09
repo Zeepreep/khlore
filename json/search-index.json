@@ -4,6 +4,7 @@
     "description": "Seeker of Darkness, Leader of Organization XIII",
     "category": "character",
     "link": "../pages/character pages/xehanort.html",
+    "image": "../images/character_full/Xehanort_Old.png",
     "keywords": [
       "xehanort",
       "organization xiii",
@@ -21,17 +22,199 @@
     "description": "The group of Nobodies that Xehanort leads",
     "category": "group",
     "link": "../pages/group pages/organization-xiii.html",
+    "image": "../images/groups/organization_xiii_group.jpg",
+    "tag": "organization-xiii",
+    "color": "#484848",
     "keywords": [
       "organization xiii",
       "organization",
       "nobodies",
       "xehanort"
     ],
-    "tag": "organization-xiii",
-    "color": "#484848",
     "name": [
       "Org XIII",
       "Organization XIII"
+    ]
+  },
+  {
+    "title": "Sora",
+    "description": "The main protagonist of the Kingdom Hearts series",
+    "category": "character",
+    "link": "../pages/character pages/sora.html",
+    "image": "../images/character_renders/sora.webp",
+    "tag": "sora",
+    "color": "#ffd700",
+    "keywords": [
+      "sora",
+      "keyblade wielder",
+      "main character"
+    ],
+    "name": [
+      "Sora",
+      "Sora"
+    ]
+  },
+  {
+    "title": "Roxas",
+    "description": "The Nobody of Sora",
+    "category": "character",
+    "link": "../pages/character pages/roxas.html",
+    "image": "../images/character_renders/roxas.webp",
+    "tag": "roxas",
+    "color": "#ffa500",
+    "keywords": [
+      "roxas",
+      "nobody",
+      "sora"
+    ],
+    "name": [
+      "Roxas",
+      "Roxas"
+    ]
+  },
+  {
+    "title": "Namine",
+    "description": "The Nobody of Kairi",
+    "category": "character",
+    "link": "../pages/character pages/namine.html",
+    "image": "../images/character_renders/namine.webp",
+    "tag": "namine",
+    "color": "#ff69b4",
+    "keywords": [
+      "namine",
+      "nobody",
+      "kairi"
+    ],
+    "name": [
+      "Namine",
+      "Namine"
+    ]
+  },
+  {
+    "title": "Kairi",
+    "description": "A Princess of Heart and one of Sora's best friends",
+    "category": "character",
+    "link": "../pages/character pages/kairi.html",
+    "image": "../images/character_renders/kairi.webp",
+    "tag": "kairi",
+    "color": "#ff69b4",
+    "keywords": [
+      "kairi",
+      "princess of heart",
+      "sora"
+    ],
+    "name": [
+      "Kairi",
+      "Kairi"
+    ]
+  },
+  {
+    "title": "Ansem, Seeker of Darkness",
+    "description": "The Heartless of Xehanort",
+    "category": "character",
+    "link": "../pages/character pages/ansem-sod.html",
+    "image": "../images/character_renders/ansem-sod.webp",
+    "tag": "ansem-sod",
+    "color": "#000000",
+    "keywords": [
+      "ansem",
+      "seeker of darkness",
+      "heartless",
+      "xehanort"
+    ],
+    "name": [
+      "Ansem, SoD",
+      "Ansem, Seeker of Darkness"
+    ]
+  },
+  {
+    "title": "Riku",
+    "description": "Sora's best friend and a Keyblade wielder",
+    "category": "character",
+    "link": "../pages/character pages/riku.html",
+    "image": "../images/character_renders/riku.webp",
+    "tag": "riku",
+    "color": "#0000ff",
+    "keywords": [
+      "riku",
+      "keyblade wielder",
+      "sora"
+    ],
+    "name": [
+      "Riku",
+      "Riku"
+    ]
+  },
+  {
+    "title": "Marluxia",
+    "description": "The main antagonist of Kingdom Hearts: Chain of Memories",
+    "category": "character",
+    "link": "../pages/character pages/marluxia.html",
+    "image": "../images/character_renders/marluxia.webp",
+    "tag": "marluxia",
+    "color": "#f19bf1",
+    "name": [
+      "Marluxia",
+      "Marluxia"
+    ],
+    "keywords": [
+      "marluxia",
+      "organization xiii",
+      "chain of memories"
+    ]
+  },
+  {
+    "title": "Vexen",
+    "description": "The scientist of Organization XIII",
+    "category": "character",
+    "link": "../pages/character pages/vexen.html",
+    "image": "../images/character_renders/vexen.webp",
+    "tag": "vexen",
+    "color": "#00ff00",
+    "name": [
+      "Vexen",
+      "Vexen"
+    ],
+    "keywords": [
+      "vexen",
+      "organization xiii",
+      "scientist"
+    ]
+  },
+  {
+    "title": "Axel",
+    "description": "The Flurry of Dancing Flames",
+    "category": "character",
+    "link": "../pages/character pages/axel.html",
+    "image": "../images/character_renders/axel.webp",
+    "tag": "axel",
+    "color": "#ff0000",
+    "name": [
+      "Axel",
+      "Axel"
+    ],
+    "keywords": [
+      "axel",
+      "organization xiii",
+      "flurry of dancing flames"
+    ]
+  },
+  {
+    "title": "Xemnas",
+    "description": "The Superior of Organization XIII",
+    "category": "character",
+    "link": "../pages/character pages/xemnas.html",
+    "image": "../images/character_renders/xemnas.webp",
+    "tag": "xemnas",
+    "color": "#000000",
+    "name": [
+      "Xemnas",
+      "Xemnas"
+    ],
+    "keywords": [
+      "xemnas",
+      "organization xiii",
+      "superior"
     ]
   },
   {
@@ -105,60 +288,6 @@
       "Dark Road"
     ],
     "category": "game"
-  },
-  {
-    "tag": "sora",
-    "color": "#ffd700",
-    "name": [
-      "Sora",
-      "Sora"
-    ],
-    "category": "character"
-  },
-  {
-    "tag": "roxas",
-    "color": "#ffa500",
-    "name": [
-      "Roxas",
-      "Roxas"
-    ],
-    "category": "character"
-  },
-  {
-    "tag": "marluxia",
-    "color": "#f19bf1",
-    "name": [
-      "Marluxia",
-      "Marluxia"
-    ],
-    "category": "character"
-  },
-  {
-    "tag": "vexen",
-    "color": "#5b9191",
-    "name": [
-      "Vexen",
-      "Vexen"
-    ],
-    "category": "character"
-  },
-  {
-    "tag": "axel",
-    "color": "#ff0c0c",
-    "name": [
-      "Axel",
-      "Axel"
-    ],
-    "category": "character"
-  },
-  {
-    "tag": "xemnas",
-    "color": "#b7b7b7",
-    "name": [
-      "Xemnas",
-      "Xemnas"
-    ],
-    "category": "character"
   },
   {
     "tag": "twilight-town",

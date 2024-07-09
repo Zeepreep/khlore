@@ -8,7 +8,9 @@
 /* Global Styles */
 body {
     font-family: 'Rubik', sans-serif;
-    background-color: #f5f5f5;
+    background-image: url("../../images/backgrounds/bg_xehanort.png");
+    background-size: cover;
+    background-position: center;
     color: #333;
 }
 
@@ -16,18 +18,24 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    
 }
 
 .header {
-    background-color: #4b5d31;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+    display: block;
+    margin: 15px auto 5px auto;
+    
+    background: #dadada;
+    padding: 10px 25px 25px 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    text-align: left;
+    width: 50%;
 }
 
 .header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+    font-size: 6em;
+    margin: 0 0 0 0;
 }
 
 .header p {
@@ -35,6 +43,7 @@ body {
 }
 
 .main {
+  
     padding: 20px 0;
 }
 
@@ -47,7 +56,7 @@ body {
 
 .character {
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 6px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
@@ -60,13 +69,16 @@ body {
 .image-container {
     position: relative;
     overflow: hidden;
-    height: 200px; /* Adjust height as needed */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    padding: 10px;
 }
 
 .image-container img {
-    padding: 10px;
     width: 100%;
-    height: 100%;
+    height: 100%;    
     object-fit: contain;
     transition: transform 0.2s ease-in-out;
 }
@@ -74,17 +86,7 @@ body {
 .character-name {
     padding: 10px;
     text-align: center;
-    background-color: #4b5d31;
+    background-color: var(--color);
     color: #fff;
     font-weight: bold;
-}
-
-.footer {
-    background-color: #4b5d31;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
