@@ -1,10 +1,11 @@
 ﻿/* General Styles */
 body {
     font-family: 'Rubik', sans-serif;
-    background-image: url('../../images/etc/Terra-Background.png');
-    background-size: cover;
     margin: 0;
     padding: 0;
+    background-repeat: repeat;
+    background-size: 100% auto;
+    background-attachment: scroll;
 }
 
 .page {
@@ -80,39 +81,134 @@ body {
     background-color: #3a4625;
 }
 
-/* Side Bar Toggle Styles */
-.toggle-container-side {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #90b25e;
-    width: 2%;
-    height: 100%;
-    margin-top: 10px;
+/* Sidebar Toggle Button */
+.toggle-sidebar-btn {
+    display: block;
+    background-color: #4b5d31;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    z-index: 1000;
+}
+
+.toggle-sidebar-btn:hover {
+    background-color: #3a4625;
+}
+
+/* Sidebar Styles */
+.side-bar {
+    position: fixed;
+    width: 200px;
+    transition: width 0.3s;
+
+    z-index: 1000;
 }
 
 .content-side-bar {
-    max-width: 0;
-    overflow: hidden;
-    transition: max-width 0.2s ease-out;
-    margin-top: 10px;
+    display: none;
+    background-image: url('../../images/etc/Terra-Background-Inverse.png');
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 65px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.side-bar {
+.filter-tags {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.filter-tags {
+    display: none;
+}
+
+.filter-tags.active {
     display: block;
-    justify-content: space-between;
+}
+
+.filter-tags h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #4b5d31;
+}
+
+.filter-tags label {
+    display: flex;
     align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+    font-size: 1em;
+    position: relative;
+    padding: 5px 10px;
+    background-color: #222;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    gap: 10px;
+}
+
+.filter-tags input[type="checkbox"] {
+    margin-right: 10px;
     cursor: pointer;
 }
 
-.side-bar img {
-    object-fit: fill;
+.filter-tags input[type="checkbox"]::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: var(--color);
+    border-radius: 50%;
+    margin-right: 10px;
 }
 
-#toggle-side:checked ~ .content-side-bar {
-    max-width: 150px;
+.filter-tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
 }
+
+.filter-tabs button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background-color: #ddd;
+    cursor: pointer;
+}
+.filter-tabs button.active {
+    background-color: #bbb;
+}
+
+/* General Styles for Game Tags */
+.game-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--color);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.game-tag::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: var(--color);
+    border-radius: 50%;
+}
+
 
 /* Main Content Styles */
 .content {
@@ -130,7 +226,6 @@ body {
 
 /* Header Styles */
 .header {
-    text-align: center;
     margin-bottom: 20px;
     background: white;
     text-align: left;

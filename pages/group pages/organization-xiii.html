@@ -1,15 +1,18 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Xehanort page</title>
+    <title>Xehanort Page</title>
     <link rel="stylesheet" href="../../styles/character_styles/regular_page_style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
           rel="stylesheet">
+    <script defer src="../../json/regular_page_script.js"></script>
 </head>
-<body>
+<body style="background-image: url('../../images/backgrounds/org13_bg.png');">
+
 <div class="page">
     <div class="top-bar">
         <input type="checkbox" id="toggle-top" style="display:none;">
@@ -27,20 +30,29 @@
         <label for="toggle-top" class="top-bar"> Click here to toggle</label>
     </div>
 
-
     <div class="content">
-
         <div class="side-bar">
-            <input type="checkbox" id="toggle-side" style="display:none;">
+            <button class="toggle-sidebar-btn" onclick="toggleSidebar()">☰</button>
             <div class="content-side-bar">
-                <img src="../../images/etc/Terra-Background-Inverse.png" alt="Side background image.">
+                <div class="filter-tabs">
+                    <button id="game-tab" class="active" onclick="showFilter('game')">Games</button>
+                    <button id="character-tab" onclick="showFilter('character')">Characters</button>
+                    <button id="world-tab" onclick="showFilter('world')">Worlds</button>
+                </div>
+                <div class="filter-tags game-tags active">
+                    <h3>Filter by Game</h3>
+                    <!-- Game tags will be dynamically inserted here -->
+                </div>
+                <div class="filter-tags character-tags">
+                    <h3>Filter by Character</h3>
+                    <!-- Character tags will be dynamically inserted here -->
+                </div>
+                <div class="filter-tags world-tags">
+                    <h3>Filter by World</h3>
+                    <!-- World tags will be dynamically inserted here -->
+                </div>
             </div>
         </div>
-
-        <div class="toggle-container-side">
-            <label for="toggle-side" class="side-bar"> > </label>
-        </div>
-
 
         <div class="main">
             <div class="header">
@@ -58,44 +70,46 @@
                 </div>
             </div>
 
+            <!-- Main content -->
             <div class="main-content">
-                <div class="image-container" style="--color: #d7d2d9" ;>
-
-
+                <div class="image-container" data-tags="kh2 sora twilight-town" style="--color: #5fc0e0;">
+                    <div class="game-tag">KH2</div>
                     <div class="text-container">
-                        <div class="games">
-                            <div class="game kh2" style="--color: #5fc0e0;">KH2</div>
-                        </div>
-
                         <p class="hover-text" style="--color: #524f52;">Marluxia orders Vexen to eliminate Sora.</p>
                     </div>
-
                     <div class="image-box">
                         <img src="../../images/groups/marluxia_stuff.webp"
                              alt="Marluxia orders Vexen to eliminate Sora.">
                     </div>
                 </div>
 
-                <div class="image-container" style="--color: #4b5d31" ;>
+                <div class="image-container" data-tags="kh2 roxas twilight-town" style="--color: #b9e77b;">
+                    <div class="game-tag">KH2</div>
                     <div class="text-container">
-                        <div class="games">
-                            <div class="game kh2" style="--color: #5fc0e0;">KH2</div>
-                        </div>
-
-                        <p class="hover-text" style="--color: #b9e77b;">Roxas undergoes the naming ceremony.</p>
+                        <p class="hover-text" style="--color: #514e51;">Roxas undergoes the naming ceremony.</p>
                     </div>
                     <div class="image-box">
                         <img src="../../images/groups/roxas_stuff.webp" alt="Roxas undergoes the naming ceremony.">
                     </div>
                 </div>
 
-                <div class="image-container large" style="--color: #5c6b5c" ;>
+                <div class="image-container large" data-tags="kh2 organization-xiii twilight-town"
+                     style="--color: #c9ecc9;">
+                    <div class="game-tag">KH2</div>
                     <div class="text-container">
-                        <div class="games">
-                            <div class="game kh2" style="--color: #5fc0e0;">KH2</div>
-                        </div>
+                        <p class="hover-text" style="--color: #504d50;">The black coats worn by Organization XIII.</p>
+                    </div>
+                    <div class="image-box">
+                        <img src="../../images/groups/coats_stuff.webp"
+                             alt="The black coats worn by Organization XIII.">
+                    </div>
+                </div>
 
-                        <p class="hover-text" style="--color: #c9ecc9;">The black coats worn by Organization XIII.</p>
+                <div class="image-container large" data-tags="358 organization-xiii the-world-that-never-was"
+                     style="--color: #1d851d;">
+                    <div class="game-tag">358/2</div>
+                    <div class="text-container">
+                        <p class="hover-text" style="--color: #504d50;">The black coats worn by Organization XIII.</p>
                     </div>
                     <div class="image-box">
                         <img src="../../images/groups/coats_stuff.webp"
@@ -124,16 +138,6 @@
             </div>
         </div>
     </div>
-
-    <script>
-        document.getElementById('search-form').addEventListener('submit', function (event) {
-            event.preventDefault();
-            const query = document.getElementById('search-query').value;
-            if (query) {
-                window.location.href = `../search.html?q=${encodeURIComponent(query)}`;
-            }
-        });
-    </script>
-
+</div>
 </body>
 </html>
