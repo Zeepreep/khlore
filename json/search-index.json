@@ -3,8 +3,8 @@
     "title": "Xehanort",
     "description": "Seeker of Darkness, Leader of Organization XIII",
     "category": "character",
-    "link": "khlore/pages/character pages/xehanort.html",
-    "image": "khlore/images/character_full/Xehanort_Old.png",
+    "link": "pages/character pages/xehanort.html",
+    "image": "images/character_full/Xehanort_Old.png",
     "keywords": [
       "xehanort",
       "organization xiii",
@@ -21,8 +21,8 @@
     "title": "Organization XIII",
     "description": "The group of Nobodies that Xehanort leads",
     "category": "group",
-    "link": "khlore/pages/group pages/organization-xiii.html",
-    "image": "khlore/images/groups/organization_xiii_group.jpg",
+    "link": "pages/group pages/organization-xiii.html",
+    "image": "images/groups/organization_xiii_group.jpg",
     "tag": "organization-xiii",
     "color": "#484848",
     "keywords": [
