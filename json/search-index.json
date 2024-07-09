@@ -3,8 +3,8 @@
     "title": "Xehanort",
     "description": "Seeker of Darkness, Leader of Organization XIII",
     "category": "character",
-    "link": "/pages/character pages/xehanort.html",
-    "image": "/images/character_full/Xehanort_Old.png",
+    "link": "pages/character pages/xehanort.html",
+    "image": "images/character_full/Xehanort_Old.png",
     "keywords": [
       "xehanort",
       "organization xiii",
@@ -21,8 +21,8 @@
     "title": "Organization XIII",
     "description": "The group of Nobodies that Xehanort leads",
     "category": "group",
-    "link": "/pages/group pages/organization-xiii.html",
-    "image": "/images/groups/organization_xiii_group.jpg",
+    "link": "pages/group pages/organization-xiii.html",
+    "image": "images/groups/organization_xiii_group.jpg",
     "tag": "organization-xiii",
     "color": "#484848",
     "keywords": [
@@ -40,8 +40,8 @@
     "title": "Sora",
     "description": "The main protagonist of the Kingdom Hearts series",
     "category": "character",
-    "link": "../pages/character pages/sora.html",
-    "image": "../images/character_renders/sora.webp",
+    "link": "pages/character pages/sora.html",
+    "image": "images/character_renders/sora.webp",
     "tag": "sora",
     "color": "#ffd700",
     "keywords": [
@@ -58,8 +58,8 @@
     "title": "Roxas",
     "description": "The Nobody of Sora",
     "category": "character",
-    "link": "../pages/character pages/roxas.html",
-    "image": "../images/character_renders/roxas.webp",
+    "link": "pages/character pages/roxas.html",
+    "image": "images/character_renders/roxas.webp",
     "tag": "roxas",
     "color": "#ffa500",
     "keywords": [
