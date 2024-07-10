@@ -19,13 +19,15 @@
 </div>
 
 <script>
+    const basePath = '../';
+
     function getQueryParameter(name) {
         const urlParams = new URLSearchParams(window.location.search);
         return urlParams.get(name);
     }
 
     async function fetchSearchIndex() {
-        const response = await fetch('../json/search-index.json');
+        const response = await fetch(basePath + 'json/search-index.json');
         const data = await response.json();
         return data;
     }
@@ -38,9 +40,9 @@
             (item.title && item.title.toLowerCase().includes(query.toLowerCase())) ||
             (item.description && item.description.toLowerCase().includes(query.toLowerCase())) ||
             (item.keywords && item.keywords.some(keyword => keyword.toLowerCase().includes(query.toLowerCase()))) ||
-            (item.tags && item.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase()))) // Include tags in the search
+            (item.tags && item.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase())))
         );
-        
+
         if (filteredResults.length === 0) {
             resultsContainer.innerHTML = '<p>No results found.</p>';
         } else {
@@ -50,7 +52,7 @@
 
                 const title = document.createElement('h2');
                 const link = document.createElement('a');
-                link.href = result.link;
+                link.href = basePath + result.link;  // Prepend the base path to the link
                 link.textContent = result.title;
                 title.appendChild(link);
 

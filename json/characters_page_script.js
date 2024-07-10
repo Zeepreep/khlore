@@ -1,5 +1,6 @@
-﻿// Fetch the data from the search-index.json file
-fetch('json/search-index.json')
+﻿const basePath = '../';
+
+fetch('../json/search-index.json')
     .then(response => {
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
@@ -11,34 +12,64 @@ fetch('json/search-index.json')
 
         charactersGrid.innerHTML = '';
 
-        characters.forEach(character => {
-            // Check if the category is either "character" or "group"
-            if (character.category === 'character' || character.category === 'group') {
-                // Create the anchor element
-                const anchorElement = document.createElement('a');
-                anchorElement.href = character.link;
+        const createCharacterElement = (character) => {
+            const link = basePath + character.link;
+            const image = basePath + character.image;
 
-                const characterElement = document.createElement('div');
-                characterElement.className = 'character';
+            const anchorElement = document.createElement('a');
+            anchorElement.href = link;
 
-                // Create the character name element
-                const characterNameElement = document.createElement('div');
-                characterNameElement.className = 'character-name';
-                characterNameElement.textContent = character.name[1];
-                characterNameElement.style.backgroundColor = character.color;
+            const characterElement = document.createElement('div');
+            characterElement.className = 'character';
 
-                // Check if the character has an image
-                if (character.image) {
-                    const imageElement = document.createElement('img');
-                    imageElement.src = character.image;
-                    imageElement.alt = character.name[1];
-                    imageElement.className = 'image-container';
-                    characterElement.appendChild(imageElement);
+            const characterNameElement = document.createElement('div');
+            characterNameElement.className = 'character-name';
+            characterNameElement.textContent = character.name[1];
+            characterNameElement.style.backgroundColor = character.color;
+
+            if (character.image) {
+                const imageElement = document.createElement('img');
+                imageElement.src = image;
+                imageElement.alt = character.name[1];
+                imageElement.className = 'image-container';
+                characterElement.appendChild(imageElement);
+            }
+
+            characterElement.appendChild(characterNameElement);
+            anchorElement.appendChild(characterElement);
+
+            return anchorElement;
+        };
+
+        const createCategorySection = (characters, categoryName) => {
+            const section = document.createElement('div');
+            section.className = 'category-section';
+
+            const title = document.createElement('h2');
+            title.textContent = categoryName;
+            charactersGrid.appendChild(title); // Append the title to the charactersGrid, not the section
+
+            characters.forEach(character => {
+                if (character.category === 'character' || character.category === 'group') {
+                    section.appendChild(createCharacterElement(character));
                 }
+            });
 
-                characterElement.appendChild(characterNameElement);
-                anchorElement.appendChild(characterElement);
-                charactersGrid.appendChild(anchorElement);
+            return section;
+        };
+
+        const groups = [...new Set(characters.map(character => character.group))];
+
+        groups.forEach(group => {
+            const groupCharacters = characters.filter(character => character.group === group);
+            charactersGrid.appendChild(createCategorySection(groupCharacters, group));
+        });
+
+        document.getElementById('search-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const query = document.getElementById('search-query').value;
+            if (query) {
+                window.location.href = `../pages/search.html?q=${encodeURIComponent(query)}`;
             }
         });
     })
