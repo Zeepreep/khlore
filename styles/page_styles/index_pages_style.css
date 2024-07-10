@@ -193,3 +193,71 @@ body {
     color: #fff;
     font-weight: bold;
 }
+
+/* Styles for Games */
+.games-grid {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+    padding: 15px;
+
+    background-color: rgba(239, 239, 239, 0.70);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.game {
+    background-color: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    margin: 10px;
+}
+
+.game:hover {
+    transform: translateY(-5px);
+}
+
+.game-name {
+    padding: 10px;
+    text-align: center;
+    background-color: var(--color);
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Styles for Worlds */
+.worlds-grid {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+    padding: 15px;
+
+    background-color: rgba(239, 239, 239, 0.70);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.world {
+    background-color: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    margin: 10px;
+}
+
+.world:hover {
+    transform: translateY(-5px);
+}
+
+.world-name {
+    padding: 10px;
+    text-align: center;
+    background-color: var(--color);
+    color: #fff;
+    font-weight: bold;
+}
