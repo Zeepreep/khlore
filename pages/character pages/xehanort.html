@@ -1,21 +1,26 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Xehanort page</title>
+    <title>Xehanort Page</title>
     <link rel="stylesheet" href="../../styles/character_styles/regular_page_style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
           rel="stylesheet">
+    <script defer src="../../json/regular_page_script.js"></script>
 </head>
-<body style="background-image: url('../../images/backgrounds/xehanort_bg.png');">
+<body style="background-image: url('../../images/backgrounds/bg_xehanort.png');">
 
 <div class="page">
     <div class="top-bar">
+
         <input type="checkbox" id="toggle-top" style="display:none;">
         <div class="content-top-bar">
-            <img src="../../images/etc/Terra-Background-Inverse.png" alt="Top background image.">
+            <a href="../../index.html">
+                <button class="home-button">Home</button>
+            </a>
             <div class="search-bar">
                 <form id="search-form">
                     <input type="text" id="search-query" name="query" placeholder="Search the wiki...">
@@ -25,78 +30,54 @@
         </div>
     </div>
     <div class="toggle-container-top">
-        <label for="toggle-top" class="top-bar"> Click here to toggle</label>
+        <label for="toggle-top" class="top-bar-button"> Click here to toggle</label>
     </div>
 
-
     <div class="content">
-
         <div class="side-bar">
-            <input type="checkbox" id="toggle-side" style="display:none;">
+            <button class="toggle-sidebar-btn" onclick="toggleSidebar()">☰</button>
             <div class="content-side-bar">
-                <img src="../../images/etc/Terra-Background-Inverse.png" alt="Side background image.">
+                <div class="filter-tabs">
+                    <button id="game-tab" class="active" onclick="showFilter('game')">Games</button>
+                    <button id="character-tab" onclick="showFilter('character')">Characters</button>
+                    <button id="world-tab" onclick="showFilter('world')">Worlds</button>
+                </div>
+                <div class="filter-tags game-tags active">
+                    <h3>Filter by Game</h3>
+                    <!-- Game tags will be dynamically inserted here -->
+                </div>
+                <div class="filter-tags character-tags">
+                    <h3>Filter by Character</h3>
+                    <!-- Character tags will be dynamically inserted here -->
+                </div>
+                <div class="filter-tags world-tags">
+                    <h3>Filter by World</h3>
+                    <!-- World tags will be dynamically inserted here -->
+                </div>
             </div>
         </div>
+    </div>
 
-        <div class="toggle-container-side">
-            <label for="toggle-side" class="side-bar"> > </label>
-        </div>
-
-
+    <div class="page-elements">
         <div class="main">
             <div class="header">
                 <h1>Xehanort</h1>
                 <h2>Leader of <a href="../group%20pages/organization-xiii.html">Organization XIII</a></h2>
                 <div class="games">
-                    <div class="game bbs" style="--color: #7694fd;">BBS</div>
-                    <div class="game ddd" style="--color: #cd03c5;">DDD</div>
-                    <div class="game kh3" style="--color: #fda654;">KH3</div>
-                    <div class="game dr" style="--color: #808080;">DR</div>
+
                 </div>
             </div>
 
+            <!-- Main content -->
             <div class="main-content">
-                <div class="image-container" style="--color: #d7d2d9" ;>
-
-
+                
+                <div class="image-container" data-tags="kh2 xehanort"
+                     style="--color: #b9e77b;">
                     <div class="text-container">
-                        <div class="games">
-                            <div class="game kh2" style="--color: #5fc0e0;">KH2</div>
-                        </div>
-
-                        <p class="hover-text" style="--color: #524f52;">Marluxia orders Vexen to eliminate Sora.</p>
-                    </div>
-
-                    <div class="image-box">
-                        <img src="../../images/groups/marluxia_stuff.webp"
-                             alt="Marluxia orders Vexen to eliminate Sora.">
-                    </div>
-                </div>
-
-                <div class="image-container" style="--color: #4b5d31" ;>
-                    <div class="text-container">
-                        <div class="games">
-                            <div class="game kh2" style="--color: #5fc0e0;">KH2</div>
-                        </div>
-
-                        <p class="hover-text" style="--color: #b9e77b;">Roxas undergoes the naming ceremony.</p>
+                        <p class="hover-text" style="--color: #514e51;">Master Xehanort encouraging Terra to harness darkness.</p>
                     </div>
                     <div class="image-box">
-                        <img src="../../images/groups/roxas_stuff.webp" alt="Xehanort >:).">
-                    </div>
-                </div>
-
-                <div class="image-container large" style="--color: #5c6b5c" ;>
-                    <div class="text-container">
-                        <div class="games">
-                            <div class="game kh2" style="--color: #5fc0e0;">KH2</div>
-                        </div>
-
-                        <p class="hover-text" style="--color: #c9ecc9;">The black coats worn by Organization XIII.</p>
-                    </div>
-                    <div class="image-box">
-                        <img src="../../images/groups/coats_stuff.webp"
-                             alt="Xehanort.">
+                        <img src="../../images/etc/xehanort_page_1.webp" alt="Xehanort in Kingdom Hearts 2.">
                     </div>
                 </div>
             </div>
@@ -104,33 +85,29 @@
 
         <div class="passport">
             <div class="passport-background">
-                <img src="../../images/etc/passport_backing.png" alt="passport">
+                <img src="../../images/profiles/profile_outline-filled.png" alt="passport">
             </div>
             <div class="passport-content">
                 <div class="passport-photo">
-                    <img src="../../images/character_full/Xehanort_Old.png" alt="Xehanort in Union X">
+                    <img src="../../images/character_full/Xehanort_Old.png" alt="Xehanort">
                 </div>
+
+                <div class="header-text">
+                    <p><strong>BIOGRAPHY</strong></p>
+                </div>
+
                 <div class="profile-info">
-                    <p><strong>Age:</strong></p>
-                    <p><strong>Status:</strong></p>
-                    <p><strong>Voice actor:</strong></p>
-                    <p><strong>Species:</strong></p>
-                    <p><strong>Gender:</strong></p>
-                    <p><strong>Homeworld:</strong></p>
+                    <p><strong>Age:</strong> Unknown</p>
+                    <p><strong>Status:</strong> Antagonist</p>
+                    <p><strong>Voice actor:</strong> Leonard Nimoy (English), Chikao Ōtsuka (Japanese)</p>
+                    <p><strong>Species:</strong> Human</p>
+                    <p><strong>Gender:</strong> Male</p>
+                    <p><strong>Homeworld:</strong> Destiny Islands</p>
                 </div>
             </div>
         </div>
     </div>
-
-    <script>
-        document.getElementById('search-form').addEventListener('submit', function (event) {
-            event.preventDefault();
-            const query = document.getElementById('search-query').value;
-            if (query) {
-                window.location.href = `../search.html?q=${encodeURIComponent(query)}`;
-            }
-        });
-    </script>
-
+</div>
+</div>
 </body>
 </html>

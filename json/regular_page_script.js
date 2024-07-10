@@ -40,6 +40,8 @@ async function createFilterTags() {
                     }
                 });
 
+                const gamesDiv = document.querySelector('.header .games');
+
                 uniqueTags.forEach(tagKey => {
                     if (tags.hasOwnProperty(tagKey)) {
                         const filterTagsContainer = document.querySelector(`.${tags[tagKey].category}-tags`);
@@ -57,8 +59,15 @@ async function createFilterTags() {
                             tagElement.innerHTML = `<input type="checkbox" class="tag-filter" value="${tagKey}"> ${displayName}`;
                             tagContainer.appendChild(tagElement);
                             filterTagsContainer.appendChild(tagContainer);
-                            console.log(`Appended tag ${tagKey} to the ${tags[tagKey].category} tab`);
-                        } else {
+
+                            if (tagData.category === 'game' && gamesDiv) {
+                                const gameDiv = document.createElement('div');
+                                gameDiv.className = `game ${tagKey}`;
+                                gameDiv.textContent = tagData.name[0]; 
+                                gameDiv.style.setProperty('--color', tagData.color);
+                                gamesDiv.appendChild(gameDiv);
+                            }
+
                             console.log(`Element with class ${tags[tagKey].category}-tags not found`);
                         }
                     }
@@ -74,6 +83,7 @@ async function createFilterTags() {
                         });
                     });
                 });
+
 
                 attachTagsToBoxes();
             })

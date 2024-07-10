@@ -6,13 +6,13 @@
     "group": "Organization XIII",
     "link": "pages/character pages/xehanort.html",
     "image": "images/character_full/Xehanort_Old.png",
+    "tag": "xehanort",
+    "color": "#B9892F",
     "keywords": [
       "xehanort",
       "organization xiii",
       "seeker of darkness"
     ],
-    "tag": "xehanort",
-    "color": "#B9892F",
     "name": [
       "Xehanort",
       "Xehanort"
