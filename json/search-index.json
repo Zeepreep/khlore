@@ -520,5 +520,41 @@
       "recom",
       "world"
     ]
+  },
+  {
+    "title": "Destiny Islands",
+    "description": "The world that appears in Kingdom Hearts",
+    "category": "world",
+    "link": "pages/world pages/destiny-islands.html",
+    "image": "images/world_renders/destiny_islands.webp",
+    "tag": "destiny-islands",
+    "color": "#4A90E2",
+    "name": [
+      "Destiny Islands",
+      "Destiny Islands"
+    ],
+    "keywords": [
+      "destiny islands",
+      "kh1",
+      "world"
+    ]
+  },
+  {
+    "title": "Land of Departure",
+    "description": "The world that appears in Kingdom Hearts: Birth by Sleep",
+    "category": "world",
+    "link": "pages/world pages/land-of-departure.html",
+    "image": "images/world_renders/land_of_departure.webp",
+    "tag": "land-of-departure",
+    "color": "#9DB7E2",
+    "name": [
+      "Land of Departure",
+      "Land of Departure"
+    ],
+    "keywords": [
+      "land of departure",
+      "bbs",
+      "world"
+    ]
   }
 ]
