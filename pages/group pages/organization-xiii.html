@@ -15,12 +15,35 @@
 
 <div class="page">
     <div class="top-bar">
-
         <input type="checkbox" id="toggle-top" style="display:none;">
         <div class="content-top-bar">
-            <a href="../../index.html">
-                <button class="home-button">Home</button>
-            </a>
+            <div class="buttons">
+                <a href="../../index.html">
+                    <button class="top-bar-button">
+                        <img src="../../images/icons/Crown_white.png" alt="Home Icon">
+                        HOME
+                    </button>
+                </a>
+                <a href="../games.html">
+                    <button class="top-bar-button">
+                        <img src="../../images/icons/Heart_white.png" alt="Games Icon">
+                        GAMES
+                    </button>
+                </a>
+                <a href="../worlds.html">
+                    <button class="top-bar-button">
+                        <img src="../../images/icons/Key_white.png" alt="Worlds Icon">
+                        WORLDS
+                    </button>
+                </a>
+                <a href="../characters.html">
+                    <button class="top-bar-button">
+                        <img src="../../images/icons/Mickey_white.png" alt="Characters Icon">
+                        CHARACTERS
+                    </button>
+                </a>
+            </div>
+
             <div class="search-bar">
                 <form id="search-form">
                     <input type="text" id="search-query" name="query" placeholder="Search the wiki...">
@@ -30,7 +53,7 @@
         </div>
     </div>
     <div class="toggle-container-top">
-        <label for="toggle-top" class="top-bar-button"> Click here to toggle</label>
+        <label for="toggle-top" class="top-bar-button"> v </label>
     </div>
 
     <div class="content">
@@ -38,20 +61,19 @@
             <button class="toggle-sidebar-btn" onclick="toggleSidebar()">☰</button>
             <div class="content-side-bar">
                 <div class="filter-tabs">
+                    <div id="sliding-background"></div>
                     <button id="game-tab" class="active" onclick="showFilter('game')">Games</button>
                     <button id="character-tab" onclick="showFilter('character')">Characters</button>
                     <button id="world-tab" onclick="showFilter('world')">Worlds</button>
                 </div>
                 <div class="filter-tags game-tags active">
-                    <h3>Filter by Game</h3>
                     <!-- Game tags will be dynamically inserted here -->
                 </div>
                 <div class="filter-tags character-tags">
-                    <h3>Filter by Character</h3>
+
                     <!-- Character tags will be dynamically inserted here -->
                 </div>
                 <div class="filter-tags world-tags">
-                    <h3>Filter by World</h3>
                     <!-- World tags will be dynamically inserted here -->
                 </div>
             </div>
@@ -64,7 +86,7 @@
                 <h1>Organization XIII</h1>
                 <h2>Run by <a href="../character%20pages/xehanort.html">Xehanort</a></h2>
                 <div class="games">
-                   
+
                 </div>
             </div>
 
