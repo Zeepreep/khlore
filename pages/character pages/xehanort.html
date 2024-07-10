@@ -9,53 +9,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
           rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script defer src="../../json/regular_page_script.js"></script>
 </head>
 <body style="background-image: url('../../images/backgrounds/bg_xehanort.png');">
 
 <div class="page">
-    <div class="top-bar">
-        <input type="checkbox" id="toggle-top" style="display:none;">
-        <div class="content-top-bar">
-            <div class="buttons">
-                <a href="../../index.html">
-                    <button class="top-bar-button">
-                        <img src="../../images/icons/Crown_white.png" alt="Home Icon">
-                        HOME
-                    </button>
-                </a>
-                <a href="../games.html">
-                    <button class="top-bar-button">
-                        <img src="../../images/icons/Heart_white.png" alt="Games Icon">
-                        GAMES
-                    </button>
-                </a>
-                <a href="../worlds.html">
-                    <button class="top-bar-button">
-                        <img src="../../images/icons/Key_white.png" alt="Worlds Icon">
-                        WORLDS
-                    </button>
-                </a>
-                <a href="../characters.html">
-                    <button class="top-bar-button">
-                        <img src="../../images/icons/Mickey_white.png" alt="Characters Icon">
-                        CHARACTERS
-                    </button>
-                </a>
-            </div>
 
-            <div class="search-bar">
-                <form id="search-form">
-                    <input type="text" id="search-query" name="query" placeholder="Search the wiki...">
-                    <button type="submit">Search</button>
-                </form>
-            </div>
-        </div>
-    </div>
-    <div class="toggle-container-top">
-        <label for="toggle-top" class="top-bar-button"> v </label>
-    </div>
-
+    <div id="top-bar"></div>
+    
     <div class="content">
         <div class="side-bar">
             <button class="toggle-sidebar-btn" onclick="toggleSidebar()">☰</button>
@@ -91,13 +53,27 @@
             </div>
 
             <!-- Main content -->
+            <div class="main-content">
                 <div class="image-container" data-tags="bbs terra xehanort land-of-departure"
                      style="--color: #b9e77b;">
                     <div class="text-container">
-                        <p class="hover-text" style="--color: #514e51;">Xehanort confronts Terra in the Land of Departure.</p>
+                        <p class="hover-text" style="--color: #514e51;">Xehanort confronts Terra in the Land of
+                            Departure.</p>
                     </div>
                     <div class="image-box">
-                        <img src="../../images/etc/xehanort_page_1.webp" alt="Xehanort confronts Terra in the Land of Departure.">
+                        <img src="../../images/etc/xehanort_page_1.webp"
+                             alt="Xehanort confronts Terra in the Land of Departure.">
+                    </div>
+                </div>
+
+                <div class="image-container large" data-tags="358 organization-xiii the-world-that-never-was"
+                     style="--color: #1d851d;">
+                    <div class="text-container">
+                        <p class="hover-text" style="--color: #504d50;">The black coats worn by Organization XIII.</p>
+                    </div>
+                    <div class="image-box">
+                        <img src="../../images/groups/coats_stuff.webp"
+                             alt="The black coats worn by Organization XIII.">
                     </div>
                 </div>
             </div>

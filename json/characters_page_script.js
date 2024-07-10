@@ -1,6 +1,10 @@
-﻿const basePath = '../';
+﻿const basePath = '../../';
 
-fetch('../json/search-index.json')
+$(function(){
+    $("#top-bar").load("../top-bar.html");
+});
+
+fetch('../../json/search-index.json')
     .then(response => {
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
@@ -64,13 +68,6 @@ fetch('../json/search-index.json')
             const groupCharacters = characters.filter(character => character.group === group);
             charactersGrid.appendChild(createCategorySection(groupCharacters, group));
         });
-
-        document.getElementById('search-form').addEventListener('submit', function (event) {
-            event.preventDefault();
-            const query = document.getElementById('search-query').value;
-            if (query) {
-                window.location.href = `../pages/search.html?q=${encodeURIComponent(query)}`;
-            }
-        });
+        
     })
     .catch(error => console.error('Error:', error));

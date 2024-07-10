@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Search Results</title>
-    <link rel="stylesheet" href="../styles/page_styles/search_style.css">
-    <script src="../json/didyoumean.js"></script>
+    <link rel="stylesheet" href="../../styles/page_styles/search_style.css">
+    <script src="../../json/didyoumean.js"></script>
 </head>
 <body>
 <div class="page">
@@ -27,7 +27,7 @@
     }
 
     async function fetchSearchIndex() {
-        const response = await fetch(basePath + 'json/search-index.json');
+        const response = await fetch(basePath + '../../json/search-index.json');
         const data = await response.json();
         return data;
     }

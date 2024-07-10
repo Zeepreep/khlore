@@ -4,75 +4,186 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
     <title>Kingdom Hearts Lore Guide</title>
-    <link rel="stylesheet" href="styles.css">
     <title>MAIN PAGE</title>
 
     <style>
+        title {
+            font-family: 'Rubik', sans-serif;
+            font-weight: bold;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Rubik', sans-serif;
+            font-weight: bold;
+            color: #3b3b3b;
             margin: 0;
             padding: 0;
+            background-image: url('images/backgrounds/bg_xehanort.png');
+            background-size: cover;
+            background-repeat: no-repeat;
         }
 
         .main {
             width: 80%;
-            margin: 0 auto;
+            margin: 20px auto;
             padding: 20px;
+            background-color: rgba(196, 196, 196, 0.7);
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            flex-wrap: wrap;
         }
+
 
         .main h1 {
             text-align: center;
-            color: #333;
+            font-family: 'Rubik', sans-serif;
+            font-weight: bold;
         }
 
         .main a {
-            display: block;
+            display: flex;
+            flex-direction: row;
             margin: 20px 0;
             text-decoration: none;
-            color: #333;
+            color: #f4f4f4;
+        }
+
+        .blocks {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .image-box img {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+            border-radius: 5px;
+            margin: 20px;
+        }
+
+        .button-container {
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            padding: 20px;
+            background-color: rgba(166, 166, 166, 0.4);
+            color: #f4f4f4;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         .button {
-            display: inline-block;
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
             padding: 10px 20px;
-            margin: 10px;
-            background-color: #333;
-            color: #fff;
+            width: 100px;
+            background-color: #f4f4f4;
+            color: #333;
             text-align: center;
             border-radius: 5px;
             text-decoration: none;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border: 2px solid #f4f4f4;
         }
 
         .button:hover {
             background-color: #666;
+            color: #f4f4f4;
+            border-color: #666;
         }
     </style>
 </head>
 
 <body>
+<script>
+    async function fetchData() {
+        const response = await fetch('/json/search-index.json');
+        const data = await response.json();
+        return data;
+    }
+
+    function getRandomItem(array) {
+        const index = Math.floor(Math.random() * array.length);
+        return array[index];
+    }
+
+    async function displayRandomImages() {
+        const data = await fetchData();
+
+        const worlds = data.filter(item => item.category === 'world');
+        const games = data.filter(item => item.category === 'game');
+        const characters = data.filter(item => item.category === 'character');
+
+        const randomWorld = getRandomItem(worlds);
+        const randomGame = getRandomItem(games);
+        const randomCharacter = getRandomItem(characters);
+
+        document.querySelector('#world-image').src = randomWorld.image;
+        document.querySelector('#game-image').src = randomGame.image;
+        document.querySelector('#character-image').src = randomCharacter.image;
+    }
+
+    $(function(){
+        $("#top-bar").load("pages/top-bar.html");
+    });
+
+    window.onload = displayRandomImages;
+</script>
+
+
+<div id="top-bar"></div>
 
 <div class="main">
-    <h1>Kingdom Hearts Lore Guide</h1>
 
-    <a href="./about.html"><h2>About!</h2></a>
+    <div class="title">
+        <h1>Kingdom Hearts Lore Guide</h1>
+    </div>
 
-    <a href="./pages/characters.html">
-        <div class="button">Characters</div>
-    </a>
+    <div class="blocks">
+        <a href="pages/main-pages/characters.html" class="button-container">
+            <div class="image-box">
+                <img id="character-image" src="" alt="Character Image">
+            </div>
+            <div class="button" id="character-button">
+                Characters
+            </div>
+        </a>
 
-    <a href="./pages/worlds.html">
-        <div class="button">Worlds</div>
-    </a>
+        <a href="pages/main-pages/worlds.html" class="button-container">
+            <div class="image-box">
+                <img id="world-image" src="" alt="World Image">
+            </div>
+            <div class="button" id="world-button">
+                Worlds
+            </div>
+        </a>
 
-    <a href="./pages/games.html">
-        <div class="button">Games</div>
-    </a>
-
+        <a href="pages/main-pages/games.html" class="button-container">
+            <div class="image-box">
+                <img id="game-image" src="" alt="Game Image">
+            </div>
+            <div class="button" id="game-button">
+                Games
+            </div>
+        </a>
+    </div>
 </div>
-
 </body>
 
 

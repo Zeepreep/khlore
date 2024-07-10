@@ -1,12 +1,4 @@
-﻿document.getElementById('search-form').addEventListener('submit', function (event) {
-    event.preventDefault();
-    const query = document.getElementById('search-query').value;
-    if (query) {
-        window.location.href = `../search.html?q=${encodeURIComponent(query)}`;
-    }
-});
-
-document.querySelectorAll('.filter-tabs button').forEach(button => {
+﻿document.querySelectorAll('.filter-tabs button').forEach(button => {
     button.addEventListener('click', function () {
         const slidingBackground = document.getElementById('sliding-background');
         const rect = this.getBoundingClientRect();
@@ -210,6 +202,10 @@ function getTagColor(tag) {
 
     return tagObject ? tagObject.color : '#000000';
 }
+
+$(function(){
+    $("#top-bar").load("../top-bar.html");
+});
 
 window.onload = async function () {
     await createFilterTags();
