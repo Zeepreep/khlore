@@ -2,19 +2,523 @@
   {
     "title": "Xehanort",
     "description": "Seeker of Darkness, Leader of Organization XIII",
-    "link": "../pages/character pages/xehanort.html",
-    "keywords": ["xehanort", "organization xiii", "seeker of darkness"]
+    "category": "character",
+    "group": "Organization XIII",
+    "link": "pages/character pages/xehanort.html",
+    "image": "images/character_full/Xehanort_Old.png",
+    "tag": "xehanort",
+    "color": "#B9892F",
+    "keywords": [
+      "xehanort",
+      "organization xiii",
+      "seeker of darkness"
+    ],
+    "name": [
+      "Xehanort",
+      "Xehanort"
+    ]
   },
   {
     "title": "Organization XIII",
     "description": "The group of Nobodies that Xehanort leads",
-    "link": "../pages/group pages/organization-xiii.html",
-    "keywords": ["organization xiii", "organization", "nobodies", "xehanort"]
+    "category": "group",
+    "group": "Organization XIII",
+    "link": "pages/group pages/organization-xiii.html",
+    "image": "images/groups/organization_xiii_group.jpg",
+    "tag": "organization-xiii",
+    "color": "#141A1D",
+    "keywords": [
+      "organization xiii",
+      "organization",
+      "nobodies",
+      "xehanort"
+    ],
+    "name": [
+      "Org XIII",
+      "Organization XIII"
+    ]
   },
   {
-    "title": "Page 3",
-    "description": "Description of page 3",
-    "link": "../page3.html",
-    "keywords": ["keyword5", "keyword6"]
+    "title": "Sora",
+    "description": "The main protagonist of the Kingdom Hearts series",
+    "category": "character",
+    "group": "Destiny Trio",
+    "link": "pages/character pages/sora.html",
+    "image": "images/character_renders/sora.webp",
+    "tag": "sora",
+    "color": "#bb4144",
+    "keywords": [
+      "sora",
+      "keyblade wielder",
+      "main character"
+    ],
+    "name": [
+      "Sora",
+      "Sora"
+    ]
+  },
+  {
+    "title": "Riku",
+    "description": "Sora's best friend and a Keyblade wielder",
+    "category": "character",
+    "group": "Destiny Trio",
+    "link": "pages/character pages/riku.html",
+    "image": "images/character_renders/riku.webp",
+    "tag": "riku",
+    "color": "#7a96d5",
+    "keywords": [
+      "riku",
+      "keyblade wielder",
+      "sora"
+    ],
+    "name": [
+      "Riku",
+      "Riku"
+    ]
+  },
+  {
+    "title": "Kairi",
+    "description": "A Princess of Heart and one of Sora's best friends",
+    "category": "character",
+    "group": "Destiny Trio",
+    "link": "pages/character pages/kairi.html",
+    "image": "images/character_renders/kairi.webp",
+    "tag": "kairi",
+    "color": "#f389a0",
+    "keywords": [
+      "kairi",
+      "princess of heart",
+      "sora"
+    ],
+    "name": [
+      "Kairi",
+      "Kairi"
+    ]
+  },
+  {
+    "title": "Namine",
+    "description": "The Nobody of Kairi",
+    "category": "character",
+    "group": "Characters of Light",
+    "link": "pages/character pages/namine.html",
+    "image": "images/character_renders/namine.webp",
+    "tag": "namine",
+    "color": "#ff69b4",
+    "keywords": [
+      "namine",
+      "nobody",
+      "kairi"
+    ],
+    "name": [
+      "Namine",
+      "Namine"
+    ]
+  },
+  {
+    "title": "Roxas",
+    "description": "The Nobody of Sora",
+    "category": "character",
+    "group": "Days Trio",
+    "link": "pages/character pages/roxas.html",
+    "image": "images/character_renders/roxas.webp",
+    "tag": "roxas",
+    "color": "#E0B262",
+    "keywords": [
+      "roxas",
+      "nobody",
+      "sora"
+    ],
+    "name": [
+      "Roxas",
+      "Roxas"
+    ]
+  },
+  {
+    "title": "Xion",
+    "description": "The fourteenth member of Organization XIII",
+    "category": "character",
+    "group": "Days Trio",
+    "link": "pages/character pages/xion.html",
+    "image": "images/character_renders/xion.webp",
+    "tag": "xion",
+    "color": "#272624",
+    "name": [
+      "Xion",
+      "Xion"
+    ],
+    "keywords": [
+      "xion",
+      "organization xiii",
+      "fourteenth member"
+    ]
+  },
+  {
+    "title": "Axel",
+    "description": "The Flurry of Dancing Flames",
+    "category": "character",
+    "group": "Days Trio",
+    "link": "pages/character pages/axel.html",
+    "image": "images/character_renders/axel.webp",
+    "tag": "axel",
+    "color": "#BD4534",
+    "name": [
+      "Axel",
+      "Axel"
+    ],
+    "keywords": [
+      "axel",
+      "organization xiii",
+      "flurry of dancing flames"
+    ]
+  },
+  {
+    "title": "Aqua",
+    "description": "One of the three Keyblade wielders in Birth by Sleep",
+    "category": "character",
+    "group": "Wayfinder Trio",
+    "link": "pages/character pages/aqua.html",
+    "image": "images/character_renders/aqua.webp",
+    "tag": "aqua",
+    "color": "#9DB7E2",
+    "name": [
+      "Aqua",
+      "Aqua"
+    ],
+    "keywords": [
+      "aqua",
+      "birth by sleep",
+      "keyblade wielder"
+    ]
+  },
+  {
+    "title": "Ventus",
+    "description": "One of the three Keyblade wielders in Birth by Sleep",
+    "category": "character",
+    "group": "Wayfinder Trio",
+    "link": "pages/character pages/ventus.html",
+    "image": "images/character_renders/ventus.webp",
+    "tag": "ventus",
+    "color": "#9CD372",
+    "name": [
+      "Ventus",
+      "Ventus"
+    ],
+    "keywords": [
+      "ventus",
+      "birth by sleep",
+      "keyblade wielder"
+    ]
+  },
+  {
+    "title": "Terra",
+    "description": "One of the three Keyblade wielders in Birth by Sleep",
+    "category": "character",
+    "group": "Wayfinder Trio",
+    "link": "pages/character pages/terra.html",
+    "image": "images/character_renders/terra.webp",
+    "tag": "terra",
+    "color": "#C4813E",
+    "name": [
+      "Terra",
+      "Terra"
+    ],
+    "keywords": [
+      "terra",
+      "birth by sleep",
+      "keyblade wielder"
+    ]
+  },
+  {
+    "title": "Ansem, Seeker of Darkness",
+    "description": "The Heartless of Xehanort",
+    "category": "character",
+    "group": "Organization XIII",
+    "link": "pages/character pages/ansem-sod.html",
+    "image": "images/character_renders/ansem-sod.webp",
+    "tag": "ansem-sod",
+    "color": "#000000",
+    "keywords": [
+      "ansem",
+      "seeker of darkness",
+      "heartless",
+      "xehanort"
+    ],
+    "name": [
+      "Ansem, SoD",
+      "Ansem, Seeker of Darkness"
+    ]
+  },
+  {
+    "title": "Marluxia",
+    "description": "The main antagonist of Kingdom Hearts: Chain of Memories",
+    "category": "character",
+    "group": "Organization XIII",
+    "link": "pages/character pages/marluxia.html",
+    "image": "images/character_renders/marluxia.webp",
+    "tag": "marluxia",
+    "color": "#E09CA4",
+    "name": [
+      "Marluxia",
+      "Marluxia"
+    ],
+    "keywords": [
+      "marluxia",
+      "organization xiii",
+      "chain of memories"
+    ]
+  },
+  {
+    "title": "Vexen",
+    "description": "The scientist of Organization XIII",
+    "category": "character",
+    "group": "Organization XIII",
+    "link": "pages/character pages/vexen.html",
+    "image": "images/character_renders/vexen.webp",
+    "tag": "vexen",
+    "color": "#A3976B",
+    "name": [
+      "Vexen",
+      "Vexen"
+    ],
+    "keywords": [
+      "vexen",
+      "organization xiii",
+      "scientist"
+    ]
+  },
+  {
+    "title": "Xemnas",
+    "description": "The Superior of Organization XIII",
+    "category": "character",
+    "group": "Organization XIII",
+    "link": "pages/character pages/xemnas.html",
+    "image": "images/character_renders/xemnas.webp",
+    "tag": "xemnas",
+    "color": "#747981",
+    "name": [
+      "Xemnas",
+      "Xemnas"
+    ],
+    "keywords": [
+      "xemnas",
+      "organization xiii",
+      "superior"
+    ]
+  },
+  {
+    "title": "Kingdom Hearts 1",
+    "description": "The first game in the Kingdom Hearts series",
+    "category": "game",
+    "link": "pages/game pages/kh1.html",
+    "image": "images/game_covers/kh1.webp",
+    "tag": "kh1",
+    "color": "#58ab58",
+    "name": [
+      "KH1",
+      "Kingdom Hearts"
+    ],
+    "keywords": [
+      "kingdom hearts",
+      "kh1",
+      "game"
+    ]
+  },
+  {
+    "title": "Kingdom Hearts: Chain of Memories",
+    "description": "The second game in the Kingdom Hearts series",
+    "category": "game",
+    "link": "pages/game pages/recom.html",
+    "image": "images/game_covers/recom.webp",
+    "tag": "recom",
+    "color": "#747981",
+    "name": [
+      "RE:COM",
+      "Re:Chain of Memories"
+    ],
+    "keywords": [
+      "recom",
+      "chain of memories",
+      "game"
+    ]
+  },
+  {
+    "title": "Kingdom Hearts II",
+    "description": "The third game in the Kingdom Hearts series",
+    "category": "game",
+    "link": "pages/game pages/kh2.html",
+    "image": "images/game_covers/kh2.webp",
+    "tag": "kh2",
+    "color": "#5fc0e0",
+    "name": [
+      "KH2",
+      "Kingdom Hearts II"
+    ],
+    "keywords": [
+      "kingdom hearts ii",
+      "kh2",
+      "game"
+    ]
+  },
+  {
+    "title": "Kingdom Hearts 358/2 Days",
+    "description": "The fourth game in the Kingdom Hearts series",
+    "category": "game",
+    "link": "pages/game pages/358-2.html",
+    "image": "images/game_covers/358-2.webp",
+    "tag": "358",
+    "color": "#a80000",
+    "name": [
+      "358/2",
+      "358/2 Days"
+    ],
+    "keywords": [
+      "358/2 days",
+      "358",
+      "game"
+    ]
+  },
+  {
+    "title": "Kingdom Hearts Birth by Sleep",
+    "description": "The fifth game in the Kingdom Hearts series",
+    "category": "game",
+    "link": "pages/game pages/bbs.html",
+    "image": "images/game_covers/bbs.webp",
+    "tag": "bbs",
+    "color": "#7694fd",
+    "name": [
+      "BBS",
+      "Birth by Sleep"
+    ],
+    "keywords": [
+      "birth by sleep",
+      "bbs",
+      "game"
+    ]
+  },
+  {
+    "title": "Kingdom Hearts 3D: Dream Drop Distance",
+    "description": "The sixth game in the Kingdom Hearts series",
+    "category": "game",
+    "link": "pages/game pages/ddd.html",
+    "image": "images/game_covers/ddd.webp",
+    "tag": "ddd",
+    "color": "#cd03c5",
+    "name": [
+      "DDD",
+      "Dream Drop Distance"
+    ],
+    "keywords": [
+      "dream drop distance",
+      "ddd",
+      "game"
+    ]
+  },
+  {
+    "title": "Kingdom Hearts III",
+    "description": "The seventh game in the Kingdom Hearts series",
+    "category": "game",
+    "link": "pages/game pages/kh3.html",
+    "image": "images/game_covers/kh3.webp",
+    "tag": "kh3",
+    "color": "#fda654",
+    "name": [
+      "KH3",
+      "Kingdom Hearts III"
+    ],
+    "keywords": [
+      "kingdom hearts iii",
+      "kh3",
+      "game"
+    ]
+  },
+  {
+    "title": "Kingdom Hearts: Melody of Memory",
+    "description": "The eighth game in the Kingdom Hearts series",
+    "category": "game",
+    "link": "pages/game pages/mom.html",
+    "image": "images/game_covers/mom.webp",
+    "tag": "mom",
+    "color": "#747981",
+    "name": [
+      "MOM",
+      "Melody of Memory"
+    ],
+    "keywords": [
+      "melody of memory",
+      "mom",
+      "game"
+    ]
+  },
+  {
+    "title": "Kingdom Hearts: Dark Road",
+    "description": "The ninth game in the Kingdom Hearts series",
+    "category": "game",
+    "link": "pages/game pages/dr.html",
+    "image": "images/game_covers/dr.webp",
+    "tag": "dr",
+    "color": "#808080",
+    "name": [
+      "DR",
+      "Dark Road"
+    ],
+    "keywords": [
+      "dark road",
+      "dr",
+      "game"
+    ]
+  },
+  {
+    "title": "Twilight Town",
+    "description": "A world that appears in Kingdom Hearts II",
+    "category": "world",
+    "link": "pages/world pages/twilight-town.html",
+    "image": "images/world_renders/twilight_town.webp",
+    "tag": "twilight-town",
+    "color": "#9C4A26",
+    "name": [
+      "Twilight Town",
+      "Twilight Town"
+    ],
+    "keywords": [
+      "twilight town",
+      "kh2",
+      "world"
+    ]
+  },
+  {
+    "title": "The World That Never Was",
+    "description": "The world that appears in Kingdom Hearts II",
+    "category": "world",
+    "link": "pages/world pages/twtnw.html",
+    "image": "images/world_renders/twtnw.webp",
+    "tag": "the-world-that-never-was",
+    "color": "#747981",
+    "name": [
+      "TWTNW",
+      "The World That Never Was"
+    ],
+    "keywords": [
+      "the world that never was",
+      "kh2",
+      "world"
+    ]
+  },
+  {
+    "title": "Castle Oblivion",
+    "description": "The world that appears in Kingdom Hearts: Chain of Memories",
+    "category": "world",
+    "link": "pages/world pages/castle-oblivion.html",
+    "image": "images/world_renders/castle_oblivion.webp",
+    "tag": "castle-oblivion",
+    "color": "#5472B3",
+    "name": [
+      "Castle Oblivion",
+      "Castle Oblivion"
+    ],
+    "keywords": [
+      "castle oblivion",
+      "recom",
+      "world"
+    ]
   }
 ]

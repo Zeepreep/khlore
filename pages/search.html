@@ -1,97 +1,100 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Search Results</title>
-  <link rel="stylesheet" href="../styles/page_styles/search_style.css">
-  <script src="../json/didyoumean.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="../styles/page_styles/search_style.css">
+    <script src="../json/didyoumean.js"></script>
 </head>
 <body>
 <div class="page">
-  <div class="header">
-    <h1>Search Results</h1>
-    <p id="search-summary"></p>
-  </div>
-  <div class="content" id="results-container">
-    
-  </div>
+    <div class="header">
+        <h1>Search Results</h1>
+        <p id="search-summary"></p>
+    </div>
+    <div class="content" id="results-container">
+
+    </div>
 </div>
 
 <script>
-  function getQueryParameter(name) {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(name);
-  }
+    const basePath = '../';
 
-  async function fetchSearchIndex() {
-    const response = await fetch('../json/search-index.json');
-    const data = await response.json();
-    return data;
-  }
-
-  function renderSearchResults(query, searchIndex) {
-    const resultsContainer = document.getElementById('results-container');
-    resultsContainer.innerHTML = '';
-
-    const filteredResults = searchIndex.filter(item =>
-            item.title.toLowerCase().includes(query.toLowerCase()) ||
-            item.description.toLowerCase().includes(query.toLowerCase()) ||
-            item.keywords.some(keyword => keyword.toLowerCase().includes(query.toLowerCase()))
-    );
-
-    if (filteredResults.length === 0) {
-      resultsContainer.innerHTML = '<p>No results found.</p>';
-    } else {
-      filteredResults.forEach(result => {
-        const resultItem = document.createElement('div');
-        resultItem.classList.add('search-result');
-
-        const title = document.createElement('h2');
-        const link = document.createElement('a');
-        link.href = result.link;
-        link.textContent = result.title;
-        title.appendChild(link);
-
-        const description = document.createElement('p');
-        description.textContent = result.description;
-
-        resultItem.appendChild(title);
-        resultItem.appendChild(description);
-
-        resultsContainer.appendChild(resultItem);
-      });
+    function getQueryParameter(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
     }
-  }
 
-  function suggestCorrection(query, searchIndex) {
-    const words = searchIndex.flatMap(item => [item.title, item.description, ...item.keywords]);
-    const suggestion = didYouMean(query, words);
-    return suggestion;
-  }
+    async function fetchSearchIndex() {
+        const response = await fetch(basePath + 'json/search-index.json');
+        const data = await response.json();
+        return data;
+    }
 
-  async function main() {
-    const query = getQueryParameter('q');
-    const searchSummary = document.getElementById('search-summary');
+    function renderSearchResults(query, searchIndex) {
+        const resultsContainer = document.getElementById('results-container');
+        resultsContainer.innerHTML = '';
 
-    if (query) {
-      searchSummary.textContent = `Showing results for "${query}"`;
+        const filteredResults = searchIndex.filter(item =>
+            (item.title && item.title.toLowerCase().includes(query.toLowerCase())) ||
+            (item.description && item.description.toLowerCase().includes(query.toLowerCase())) ||
+            (item.keywords && item.keywords.some(keyword => keyword.toLowerCase().includes(query.toLowerCase()))) ||
+            (item.tags && item.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase())))
+        );
 
-      const searchIndex = await fetchSearchIndex();
-      renderSearchResults(query, searchIndex);
+        if (filteredResults.length === 0) {
+            resultsContainer.innerHTML = '<p>No results found.</p>';
+        } else {
+            filteredResults.forEach(result => {
+                const resultItem = document.createElement('div');
+                resultItem.classList.add('search-result');
 
-      if (document.getElementById('results-container').innerHTML.includes('No results found.')) {
-        const suggestion = suggestCorrection(query, searchIndex);
-        if (suggestion && suggestion !== query) {
-          searchSummary.innerHTML += `<br>Did you mean <a href="?q=${suggestion}">${suggestion}</a>?`;
+                const title = document.createElement('h2');
+                const link = document.createElement('a');
+                link.href = basePath + result.link;  // Prepend the base path to the link
+                link.textContent = result.title;
+                title.appendChild(link);
+
+                const description = document.createElement('p');
+                description.textContent = result.description;
+
+                resultItem.appendChild(title);
+                resultItem.appendChild(description);
+
+                resultsContainer.appendChild(resultItem);
+            });
         }
-      }
-    } else {
-      searchSummary.textContent = 'No search query provided.';
     }
-  }
 
-  main();
+    function suggestCorrection(query, searchIndex) {
+        const words = searchIndex.flatMap(item => [item.title, item.description, ...item.keywords]);
+        const suggestion = didYouMean(query, words);
+        return suggestion;
+    }
+
+    async function main() {
+        const query = getQueryParameter('q');
+        const searchSummary = document.getElementById('search-summary');
+
+        if (query) {
+            searchSummary.textContent = `Showing results for "${query}"`;
+
+            const searchIndex = await fetchSearchIndex();
+            renderSearchResults(query, searchIndex);
+
+            if (document.getElementById('results-container').innerHTML.includes('No results found.')) {
+                const suggestion = suggestCorrection(query, searchIndex);
+                if (suggestion && suggestion !== query) {
+                    searchSummary.innerHTML += `<br>Did you mean <a href="?q=${suggestion}">${suggestion}</a>?`;
+                }
+            }
+        } else {
+            searchSummary.textContent = 'No search query provided.';
+        }
+    }
+
+    main();
 </script>
 </body>
 </html>

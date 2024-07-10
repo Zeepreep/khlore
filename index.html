@@ -9,19 +9,46 @@
     <title>MAIN PAGE</title>
 
     <style>
-        img {
-            width: 20%;
-            align-content: center;
-        }
-
-        div {
-            text-align: center
-        }
-
         body {
-            background-image: url('images/etc/background.png');
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
         }
 
+        .main {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .main h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .main a {
+            display: block;
+            margin: 20px 0;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #666;
+        }
     </style>
 </head>
 
@@ -32,8 +59,17 @@
 
     <a href="./about.html"><h2>About!</h2></a>
 
-    <a href="./characters.html"><img src="images/etc/characters_button.png" alt="Characters Button"></a>
+    <a href="./pages/characters.html">
+        <div class="button">Characters</div>
+    </a>
 
+    <a href="./pages/worlds.html">
+        <div class="button">Worlds</div>
+    </a>
+
+    <a href="./pages/games.html">
+        <div class="button">Games</div>
+    </a>
 
 </div>
 
